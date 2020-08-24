@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from log_reg_app.models import User, Work_Day, Points, Daily_Report
 from datetime import datetime, timedelta
-from eps_app.functions import time
+# from eps_app.functions import time
 
 
 # Create your views here.
@@ -19,7 +19,7 @@ def home(request):
         'clocked_in' : clocked_in,
         'user': user,
         'all_users': all_users,
-        'times' : time
+        # 'times' : time
 
     }
     return render(request, 'eps_app/home.html', context)
