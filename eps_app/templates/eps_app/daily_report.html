@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'eps_app/styles.css' %}">
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/eps/home"><button class="btn btn-default">Clockin/Clockout</button></a>
+            <a href="/eps/points"><button class="btn btn-default">Points</button></a>
+            <a href="/eps/daily_report"><button class="btn btn-default">Daily Report</button></a>
+            <a href="/eps/settings"><button class="btn btn-default">Settings</button></a>
+            <a href="/logout"><button class="btn btn-default">Logout</button></a>
+        </div>
+        <div class="user">
+            <div>
+                <h1>User Name</h1>
+            </div>
+            <div>
+                <p>Date/Time: <span id="datetime"></span></p>
+            </div>
+            <div>
+            <a href="/eps/home"><button class="btn btn-success">Clockin</button></a>
+            <a href="/eps/home">Forgot to clock-out yesterday?</a>
+            </div>
+            <div class="points">
+                <div>
+                    <p>My Points</p>
+                    <span class="big_blue"><p>95</p></span>
+                </div>
+                <div>
+                    <p>Village Points</p>
+                    <span class="big_red"><p>95</p></span>
+                </div>
+            </div>
+            <div class="quote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores incidunt ad nemo eaque.
+                     Inventore reiciendis odit qui atque nam possimus quas non repellendus dolorem? Omnis velit
+                      neque animi excepturi dicta!</p>
+            </div>
+        </div>
+        <div id="daily_report">
+            <h1>Compose Your Daily Update</h1>
+            <form action="/" class="form-group">
+                <label for="recipients">Recipients List:</label>
+                <input type="text" name="recipients" class="form-control">
+                <form action="/" class="form-group">
+                <label for="what_i_did">What I Did Today:</label>
+                <textarea name="what_i_did" class="form-control" cols="30" rows="5"></textarea>
+                <label for="challenges">Challenges I encountered:</label>
+                <textarea name="challenges" class="form-control" cols="30" rows="5"></textarea>
+                <label for="help">What you can do to help:</label>
+                <textarea name="help" class="form-control" cols="30" rows="5"></textarea>
+                <a href="/"><button class="btn btn-primary">Submit Daily Report</button></a>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>

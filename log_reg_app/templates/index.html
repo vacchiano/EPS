@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    
+    <div id="wrapper">
+      
+        <div id="registration" class="form-group">
+            <h2>Registration</h2>
+            
+            <form action="/register" class="table" method="post">
+                {% csrf_token %}
+                <label for="first_name">First Name:</label>
+                <input type="text" class="form-control" name="first_name">
+                <label for="last_name">Last Name:</label>
+                <input type="text" class="form-control" name="last_name">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" name="email">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password">
+                <label for="confirm">Confirm Password:</label>
+                <input type="password" class="form-control" name="confirm">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div id="login" class="form-group">
+            <h2>Login</h2>
+            <form action="login" method="POST">
+                {% csrf_token %}
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" name="username">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="errors">
+                {% if messages %}
+                <ul class="messages">    
+                    {% for message in messages %}    
+                        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+        
+        <a href="users">Go to All Users</a>
+    </div>
+    
+</body>
+</html>

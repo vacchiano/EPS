@@ -1,0 +1,100 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid black;
+    background-color: gray;
+}
+
+.header button{
+    margin: 10px;
+}
+
+.user{
+    width: 300px;
+    border: 2px solid black;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.user button{
+    display: block;
+    width: 90%;
+    margin: 10px;
+}
+
+.points{
+    text-align: center;
+    font-size: 30pt;
+}
+
+.big_blue{
+    font-size: 50pt;
+    color: blue;
+}
+.big_red{
+    font-size: 50pt;
+    color:red;
+}
+
+#table_header{
+    display: inline-block;
+    vertical-align: top;
+    width: 804px;
+    padding: 20px;
+}
+
+#table_header form{
+    display: inline-block;
+    width: 200px;
+}
+
+#work_day{
+    display: inline-block;
+    vertical-align: top;
+}
+
+table, th, td{
+    margin: 10px 50px;
+}
+
+#daily_report{
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    width: 777px;
+}
+
+#daily_report button{
+    margin: 10px;
+    float: right;
+}
+
+#password_reset{
+    display: inline-block;
+    padding: 10px;
+    width: 800px;
+}
+
+#password_reset button{
+    margin: 10px;
+    float: right;
+}
+
+#timezone{
+    display: inline-block;
+    padding: 10px;
+    width: 800px;
+    vertical-align: top;
+}
+.invisible{
+    display: none;
+}
+.visible{
+    display: inline-block;
+}
