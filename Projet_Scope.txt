@@ -1,0 +1,17 @@
+Based off wireframes:
+
+Specs for V1 release:
+[x] Login/Register
+[ ] Allow user to clock in/out
+[ ] Allow user to view reports by week
+[ ] Keep track of points user earned and earned by village
+[ ] Points page that shows points by day (visual graph v2)
+[ ] Daily report page that let's user create a daily report
+[ ] Settings page where users can update info ie pwd
+
+v2?
+[ ] Allow admins to switch to admin view:
+  [ ] Can view all employees records and change/update the points
+  [ ] Can add/update employees
+  [ ] Can view employees daily updates
+[ ] Graphical display on the points page for users points per day
